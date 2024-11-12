@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!--    reference css file -->
+    <link rel="stylesheet" th:href="@{/styles/demo.css}"/>
+    <title>Hello World - Input Form</title>
+</head>
+<body>
+<!--Single quotes are required when adding a string-->
+<p th:text="'Hello world form is loaded'" class="funny"/>
+
+<form th:action="@{/processForm}" method="GET">
+
+    <input type="text" name="studentName"
+           placeholder="What's your name ?"
+    />
+
+    <input type="submit"/>
+
+</form>
+</body>
+</html>
